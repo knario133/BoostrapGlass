@@ -1,0 +1,68 @@
+// Glassmorphism Theme Variables
+
+// Base Colors
+$glass-color-primary: #0d3069 !default;
+$glass-color-primary-dark: #0a2550 !default;
+$glass-color-focus: #1c52b3 !default;
+$glass-text-color: #0d3069 !default;
+$glass-text-muted: #517dbe !default;
+$glass-body-bg: #fff !default;
+
+// Semantic Feedback Colors
+$glass-color-success: #198754 !default;
+$glass-color-danger: #dc3545 !default;
+$glass-color-warning: #ffc107 !default;
+$glass-color-info: #0dcaf0 !default;
+
+// Glass Surfaces
+$glass-bg-light: rgba(255, 255, 255, .5) !default;
+$glass-bg-input: rgba(255, 255, 255, .65) !default;
+$glass-bg-solid: rgba(255, 255, 255, .9) !default;
+$glass-bg-heavy: rgba(255, 255, 255, .85) !default;
+$glass-border: rgba(255, 255, 255, .9) !default;
+$glass-border-input: rgba(255, 255, 255, .85) !default;
+
+
+// Semantic Translucent Surfaces
+
+// Effects
+$glass-blur: 32px !default;
+$glass-input-blur: 16px !default;
+$glass-saturation: 150% !default;
+$glass-border-radius: 1rem !default;
+$glass-border-radius-sm: .5rem !default;
+$glass-border-radius-lg: 1.5rem !default;
+
+// Depth and Shadows
+$glass-shadow-outer: 0 20px 40px rgba(13, 48, 105, .15), 0 8px 16px rgba(13, 48, 105, .08) !default;
+$glass-shadow-outer-sm: 0 6px 16px rgba(13, 48, 105, .12), 0 2px 6px rgba(13, 48, 105, .06) !default;
+$glass-shadow-outer-input: 0 4px 10px rgba(13, 48, 105, .08), 0 1px 3px rgba(13, 48, 105, .05) !default;
+$glass-shadow-inner: inset 0 1px 0 rgba(255, 255, 255, 1), inset 1px 0 0 rgba(255, 255, 255, .7), inset -1px 0 0 rgba(255, 255, 255, .3), inset 0 -1px 0 rgba(13, 48, 105, .05) !default;
+$glass-shadow-inner-btn: inset 0 2px 4px rgba(255, 255, 255, .7), inset 0 -2px 4px rgba(13, 48, 105, .1) !default;
+$glass-shadow-inner-input: inset 0 2px 5px rgba(13, 48, 105, .08), inset 0 1px 1px rgba(13, 48, 105, .05), inset 0 -1px 0 rgba(255, 255, 255, 1) !default;
+
+// Focus and States
+$glass-focus-glow: 0 0 0 4px rgba($glass-color-focus, .25), 0 4px 16px rgba($glass-color-focus, .15) !default;
+$glass-hover-lift: translateY(-2px) !default;
+$glass-active-press: translateY(1px) !default;
+
+// Overriding Bootstrap defaults conceptually
+// We set these !default values here so they get picked up by Bootstrap
+$primary:       $glass-color-primary !default;
+$body-bg:       $glass-body-bg !default;
+$body-color:    $glass-text-color !default;
+$border-radius: $glass-border-radius-sm !default;
+$border-radius-lg: $glass-border-radius !default;
+$border-radius-xl: $glass-border-radius-lg !default;
+
+// Input customization
+$input-bg: $glass-bg-light !default;
+$input-border-color: $glass-border !default;
+$input-color: $glass-text-color !default;
+$input-focus-border-color: $glass-color-focus !default;
+$input-focus-box-shadow: $glass-focus-glow !default;
+
+// Card customization
+$card-bg: $glass-bg-light !default;
+$card-border-color: $glass-border !default;
+$card-border-radius: $glass-border-radius !default;

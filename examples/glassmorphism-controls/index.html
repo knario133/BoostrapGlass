@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Glassmorphism Demo</title>
+  <!-- Load the locally generated bootstrap files -->
+  <link rel="stylesheet" href="../../dist/css/bootstrap.css">
+  <!-- Load font awesome visual integration generated css -->
+  <link rel="stylesheet" href="../../dist/css/bootstrap-fontawesome.css">
+
+  <!-- Font Awesome CDN strictly for the glyphs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    .demo-section {
+      margin-bottom: 3rem;
+    }
+    .demo-title {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(13, 48, 105, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+
+        <div class="card demo-section">
+          <div class="card-body">
+            <h2 class="card-title demo-title">1. Información básica</h2>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Text</label>
+                <input type="text" class="form-control" placeholder="John Doe">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="john@example.com">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="••••••••">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Number</label>
+                <input type="number" class="form-control" placeholder="42">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Telephone</label>
+                <input type="tel" class="form-control" placeholder="+1 555-0199">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">URL</label>
+                <input type="url" class="form-control" placeholder="https://example.com">
+              </div>
+
+              <div class="col-md-12">
+                <label class="form-label">Search</label>
+                <input type="search" class="form-control" placeholder="Buscar...">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Readonly</label>
+                <input type="text" class="form-control" value="Valor de solo lectura" readonly>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Disabled</label>
+                <input type="text" class="form-control" value="Valor deshabilitado" disabled>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Textarea</label>
+                <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje aquí..."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card demo-section">
+          <div class="card-body">
+            <h2 class="card-title demo-title">2. Selección y opciones</h2>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Select</label>
+                <select class="form-select">
+                  <option selected>Elige una opción</option>
+                  <option value="1">Opción 1</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Multiple Select</label>
+                <select class="form-select" multiple aria-label="Multiple select example">
+                  <option selected>Opción 1</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label d-block">Dropdown</label>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menú desplegable
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Acción</a></li>
+                    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item active" href="#">Algo más aquí (Activo)</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="exampleDataList" class="form-label">Datalist & Autocomplete visual</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Escribe para buscar...">
+                <datalist id="datalistOptions">
+                  <option value="San Francisco">
+                  <option value="New York">
+                  <option value="Seattle">
+                  <option value="Los Angeles">
+                  <option value="Chicago">
+                </datalist>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Listas con checks</label>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                    <label class="form-check-label" for="firstCheckbox">Primera opción</label>
+                  </li>
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                    <label class="form-check-label" for="secondCheckbox">Segunda opción</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card demo-section">
+          <div class="card-body">
+            <h2 class="card-title demo-title">3. Fechas y archivos</h2>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Time</label>
+                <input type="time" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Datetime-local</label>
+                <input type="datetime-local" class="form-control">
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">Month</label>
+                <input type="month" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Week</label>
+                <input type="week" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Color</label>
+                <input type="color" class="form-control form-control-color" value="#0d3069" title="Elige tu color">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">File Simple</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">File Multiple</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Zona drag-and-drop visual</label>
+                <div class="form-control p-5 text-center text-muted" style="border-style: dashed; cursor: pointer;">
+                  <i class="fas fa-cloud-upload-alt fa-3x mb-3 text-primary"></i>
+                  <p class="mb-0">Arrastra y suelta tus archivos aquí<br>o haz clic para explorar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card demo-section">
+          <div class="card-body">
+            <h2 class="card-title demo-title">4. Checks, radios y switches</h2>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h6>Checkboxes</h6>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Checkbox por defecto
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Checkbox marcado
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                  <label class="form-check-label" for="flexCheckDisabled">
+                    Checkbox deshabilitado
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h6>Radios</h6>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Radio por defecto
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Radio marcado
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <h6>Inline Checks y Radios</h6>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">2</label>
+                </div>
+
+                <div class="form-check form-check-inline ms-4">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h6>Switches</h6>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Switch por defecto</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Switch marcado</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                  <label class="form-check-label" for="flexSwitchCheckDisabled">Switch deshabilitado</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h6>Range</h6>
+                <label for="customRange1" class="form-label">Rango ejemplo</label>
+                <input type="range" class="form-range" id="customRange1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card demo-section">
+          <div class="card-body">
+            <h2 class="card-title demo-title">5. Validaciones</h2>
+
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Válido</label>
+                <input type="text" class="form-control is-valid" value="Mark" required>
+                <div class="valid-feedback">¡Se ve bien!</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Inválido / Requerido</label>
+                <input type="text" class="form-control is-invalid" value="" required>
+                <div class="invalid-feedback">Por favor provee un nombre válido.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Advertencia (Custom Class)</label>
+                <input type="text" class="form-control is-warning" value="Contraseña media" required>
+                <div class="warning-feedback">Tu contraseña podría ser más segura.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Información (Custom Class)</label>
+                <input type="text" class="form-control is-info" value="usuario_123" required>
+                <div class="info-feedback">Este nombre de usuario es público.</div>
+              </div>
+
+              <div class="col-12 mt-4">
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                  <i class="fas fa-check-circle flex-shrink-0 me-2"></i>
+                  <div>
+                    Mensaje exitoso. Todo se ha guardado correctamente.
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card demo-section">
+          <div class="card-body">
+            <h2 class="card-title demo-title">6. Input groups y floating labels</h2>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h6>Usuario</h6>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <input type="text" class="form-control" placeholder="Usuario" aria-label="Username">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h6>Teléfono</h6>
+                <div class="input-group mb-3">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">+1</button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">+1 (US)</a></li>
+                    <li><a class="dropdown-item" href="#">+44 (UK)</a></li>
+                  </ul>
+                  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h6>Moneda</h6>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">$</span>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h6>Fecha</h6>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="DD/MM/YYYY" aria-label="Date">
+                  <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                </div>
+              </div>
+
+              <div class="col-12 mt-2">
+                <h6>Floating labels</h6>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Correo electrónico</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Contraseña</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected>Abre para ver opciones</option>
+                        <option value="1">Uno</option>
+                        <option value="2">Dos</option>
+                        <option value="3">Tres</option>
+                      </select>
+                      <label for="floatingSelect">Funciona con selects</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card demo-section">
+          <div class="card-body">
+            <h2 class="card-title demo-title">7. Acciones</h2>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <h6>Botones de todos los tipos</h6>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-link">Link</button>
+              </div>
+
+              <div class="col-12 mt-3">
+                <h6>Botones Outline</h6>
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+              </div>
+
+              <div class="col-12 mt-3">
+                <h6>Tamaños</h6>
+                <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                <button type="button" class="btn btn-primary">Default</button>
+                <button type="button" class="btn btn-primary btn-sm">Small button</button>
+              </div>
+
+              <div class="col-12 mt-3">
+                <h6>Botones con Iconos & CTA</h6>
+                <button type="button" class="btn btn-primary btn-lg w-100 text-uppercase fw-bold shadow-lg">
+                  <i class="fas fa-save me-2"></i> Guardar Cambios (CTA)
+                </button>
+                <div class="mt-3 text-center">
+                  <button type="button" class="btn btn-outline-danger rounded-circle p-3 lh-1">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                  <button type="button" class="btn btn-success rounded-circle p-3 lh-1 ms-2">
+                    <i class="fas fa-check"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="card demo-section">
+          <div class="card-body">
+            <h2 class="card-title demo-title">Extra. Tablas</h2>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Developer</td>
+                    <td><span class="badge bg-success">Activo</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Designer</td>
+                    <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td><span class="badge bg-danger">Inactivo</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../../dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

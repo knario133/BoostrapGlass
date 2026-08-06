@@ -5,14 +5,17 @@
 // scss-docs-start import-stack
 // Configuration
 @import "functions";
+@import "theme/glass-variables";
 @import "variables";
 @import "variables-dark";
 @import "maps";
 @import "mixins";
+@import "theme/glass-mixins";
 @import "utilities";
 
 // Layout & components
 @import "root";
+@import "theme/glass-root";
 @import "reboot";
 @import "type";
 @import "images";
@@ -49,4 +52,7 @@
 
 // Utilities
 @import "utilities/api";
+
+// Glass Components Override (after everything else)
+@import "theme/glass-components";
 // scss-docs-end import-stack

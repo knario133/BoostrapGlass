@@ -1,0 +1,32 @@
+// Font Awesome Glass Integration
+
+.fa,
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  filter: drop-shadow(0 3px 4px rgba(13, 48, 105, .24)) drop-shadow(0 1px 0 rgba(255, 255, 255, .85));
+}
+
+// Semantic states for icons
+.text-success .fa,
+.text-success .fas {
+  filter: drop-shadow(0 2px 4px rgba(#198754, .4)) drop-shadow(0 1px 0 rgba(255, 255, 255, .85));
+}
+
+.text-danger .fa,
+.text-danger .fas {
+  filter: drop-shadow(0 2px 4px rgba(#dc3545, .4)) drop-shadow(0 1px 0 rgba(255, 255, 255, .85));
+}
+
+.text-warning .fa,
+.text-warning .fas {
+  filter: drop-shadow(0 2px 4px rgba(#ffc107, .4)) drop-shadow(0 1px 0 rgba(255, 255, 255, .85));
+}
+
+.text-info .fa,
+.text-info .fas {
+  filter: drop-shadow(0 2px 4px rgba(#0dcaf0, .4)) drop-shadow(0 1px 0 rgba(255, 255, 255, .85));
+}
