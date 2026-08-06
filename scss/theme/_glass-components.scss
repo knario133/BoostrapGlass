@@ -1,0 +1,285 @@
+// Glassmorphism Component Overrides
+
+// Cards
+.card {
+  position: relative; // For pseudo-elements
+  @include glass-surface();
+
+  &:hover {
+    @media (prefers-reduced-motion: no-preference) {
+      box-shadow: 0 16px 40px rgba(13, 48, 105, .15), 0 4px 10px rgba(13, 48, 105, .1), $glass-shadow-inner;
+      transform: translateY(-2px);
+    }
+  }
+
+  // Reflection element
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; // Above background, below content usually
+    pointer-events: none;
+    content: "";
+    background: linear-gradient(135deg, rgba(255, 255, 255, .4) 0%, transparent 40%);
+  }
+
+  > * {
+    position: relative;
+    z-index: 2; // Ensure content stays above the reflection
+  }
+}
+
+.card-title,
+.card-header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: $glass-color-primary;
+  @include glass-text-relief();
+}
+
+// Forms
+.form-control,
+.form-select {
+  color: $glass-text-color;
+  @include glass-input-surface();
+
+  &:focus {
+    background: $glass-bg-solid; // slightly more opaque on focus
+    border-color: $glass-color-focus;
+    box-shadow: inset 0 2px 4px rgba(13, 48, 105, .05), $glass-focus-glow;
+  }
+
+  &::placeholder {
+    color: $glass-text-muted;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: rgba(255, 255, 255, .4);
+    opacity: .8;
+  }
+}
+
+// Textarea
+.form-control[type="textarea"] {
+  min-height: 100px;
+}
+
+// Input Group
+.input-group {
+  box-shadow: 0 2px 5px rgba(13, 48, 105, .05);
+
+  .form-control,
+  .form-select,
+  .input-group-text {
+    box-shadow: inset 0 2px 4px rgba(13, 48, 105, .05); // Only inner shadow for pieces
+
+    &:focus {
+      z-index: 3; // Standard bootstrap z-index fix for focus
+      box-shadow: inset 0 2px 4px rgba(13, 48, 105, .05), $glass-focus-glow;
+    }
+  }
+
+  .input-group-text {
+    color: $glass-text-color;
+    background: rgba(255, 255, 255, .7);
+    border-color: $glass-border;
+    @supports (backdrop-filter: blur(10px)) {
+      backdrop-filter: blur(10px);
+    }
+  }
+}
+
+// Floating Labels
+.form-floating > label {
+  color: $glass-text-muted;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  height: auto;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  color: $glass-color-primary;
+  background: rgba(255, 255, 255, .85); // Frosted pill
+  transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+
+  @supports (backdrop-filter: blur(4px)) {
+    backdrop-filter: blur(4px);
+  }
+}
+
+// Buttons
+.btn {
+  border: 1px solid rgba(255, 255, 255, .2);
+  box-shadow: $glass-shadow-outer-sm, $glass-shadow-inner-btn;
+
+  &:hover {
+    @media (prefers-reduced-motion: no-preference) {
+      box-shadow: 0 6px 16px rgba(13, 48, 105, .15), $glass-shadow-inner-btn;
+      transform: $glass-hover-lift;
+    }
+  }
+
+  &:active,
+  &.active {
+    @media (prefers-reduced-motion: no-preference) {
+      box-shadow: inset 0 3px 6px rgba(0, 0, 0, .15);
+      transform: $glass-active-press;
+    }
+  }
+}
+
+// Outline Buttons
+.btn-outline-primary {
+  color: $glass-color-primary;
+  border-color: rgba($glass-color-primary, .3);
+  @include glass-surface();
+
+  &:hover {
+    color: $glass-color-primary-dark;
+    background-color: rgba($glass-color-primary, .1);
+    border-color: rgba($glass-color-primary, .5);
+  }
+}
+// Add generic outline treatment
+[class*="btn-outline-"] {
+  background: rgba(255, 255, 255, .3);
+  box-shadow: $glass-shadow-outer-sm;
+
+  @supports (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .5);
+  }
+}
+
+// Checks, Radios, Switches
+.form-check-input {
+  background-color: rgba(255, 255, 255, .6);
+  border: 1px solid $glass-border;
+  box-shadow: inset 0 2px 4px rgba(13, 48, 105, .1), 0 1px 2px rgba(13, 48, 105, .05);
+
+  &:checked {
+    background-color: $glass-color-primary;
+    background-image: linear-gradient(to bottom, tint-color($glass-color-primary, 10%), $glass-color-primary);
+    border-color: $glass-color-primary-dark;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, .4), 0 2px 4px rgba($glass-color-primary, .3);
+  }
+
+  &:focus {
+    box-shadow: inset 0 2px 4px rgba(13, 48, 105, .1), $glass-focus-glow;
+  }
+}
+
+// Switches
+.form-switch .form-check-input {
+  background-color: rgba(255, 255, 255, .5);
+  // Custom switch handle for depth
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255, 255, 255, 1)' stroke='rgba(0,0,0,0.1)' stroke-width='0.5'/%3e%3c/svg%3e");
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, .1);
+
+  &:checked {
+    background-color: $glass-color-primary;
+  }
+}
+
+// Range
+.form-range {
+  &::-webkit-slider-thumb {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2), inset 0 1px 1px rgba(255, 255, 255, .8);
+  }
+}
+
+// Validations Extensions
+.is-warning {
+  @include glass-validation-state($glass-color-warning);
+}
+.warning-feedback {
+  display: none;
+  width: 100%;
+  margin-top: .25rem;
+  font-size: .875em;
+  color: shade-color($glass-color-warning, 15%);
+}
+.is-warning ~ .warning-feedback {
+  display: block;
+}
+
+.is-info {
+  @include glass-validation-state($glass-color-info);
+}
+.info-feedback {
+  display: none;
+  width: 100%;
+  margin-top: .25rem;
+  font-size: .875em;
+  color: shade-color($glass-color-info, 10%);
+}
+.is-info ~ .info-feedback {
+  display: block;
+}
+
+// Overriding default valid/invalid to use glass mixin
+.form-control.is-valid,
+.form-select.is-valid {
+  @include glass-validation-state($glass-color-success);
+}
+.form-control.is-invalid,
+.form-select.is-invalid {
+  @include glass-validation-state($glass-color-danger);
+}
+
+// Dropdowns
+.dropdown-menu {
+  padding: .5rem;
+  @include glass-surface-heavy();
+
+  .dropdown-item {
+
+    &:hover {
+      color: $glass-color-primary-dark;
+      background-color: rgba($glass-color-primary, .1);
+    }
+
+    &.active {
+      color: #fff;
+      background: linear-gradient(to right, $glass-color-primary, tint-color($glass-color-primary, 10%));
+    }
+  }
+
+  .dropdown-divider {
+    border-top-color: rgba(13, 48, 105, .1);
+  }
+}
+
+// Tables
+.table {
+  color: $glass-text-color;
+  background: transparent;
+
+  th {
+    color: $glass-color-primary-dark;
+    background-color: rgba(255, 255, 255, .4);
+    border-bottom: 2px solid rgba(13, 48, 105, .1);
+  }
+
+  td {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(13, 48, 105, .05);
+  }
+
+  tbody tr:hover  {
+    background-color: rgba(255, 255, 255, .5);
+  }
+}

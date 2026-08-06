@@ -1,0 +1,54 @@
+// Glassmorphism Mixins
+
+@mixin glass-surface {
+  background: $glass-bg-light;
+  border: 1px solid $glass-border;
+  box-shadow: $glass-shadow-outer, $glass-shadow-inner;
+
+  @supports (backdrop-filter: blur($glass-blur)) or (-webkit-backdrop-filter: blur($glass-blur)) {
+    backdrop-filter: blur($glass-blur) saturate($glass-saturation);
+  }
+  @supports not ((backdrop-filter: blur($glass-blur)) or (-webkit-backdrop-filter: blur($glass-blur))) {
+    background: $glass-bg-solid;
+  }
+}
+
+@mixin glass-surface-heavy {
+  background: $glass-bg-heavy;
+  border: 1px solid $glass-border;
+  box-shadow: $glass-shadow-outer, $glass-shadow-inner;
+
+  @supports (backdrop-filter: blur($glass-blur)) or (-webkit-backdrop-filter: blur($glass-blur)) {
+    backdrop-filter: blur($glass-blur) saturate($glass-saturation);
+  }
+  @supports not ((backdrop-filter: blur($glass-blur)) or (-webkit-backdrop-filter: blur($glass-blur))) {
+    background: $glass-bg-solid;
+  }
+}
+
+@mixin glass-input-surface {
+  background: $glass-bg-light;
+  border: 1px solid $glass-border;
+  box-shadow: inset 0 2px 4px rgba(13, 48, 105, .05), 0 2px 5px rgba(13, 48, 105, .05);
+
+  @supports (backdrop-filter: blur($glass-blur)) or (-webkit-backdrop-filter: blur($glass-blur)) {
+    backdrop-filter: blur(10px) saturate($glass-saturation);
+  }
+  @supports not ((backdrop-filter: blur($glass-blur)) or (-webkit-backdrop-filter: blur($glass-blur))) {
+    background: $glass-bg-solid;
+  }
+}
+
+@mixin glass-validation-state($color) {
+  border-color: $color;
+  box-shadow: inset 0 2px 4px rgba(13, 48, 105, .05), 0 0 0 .25rem rgba($color, .25);
+
+  &:focus {
+    border-color: $color;
+    box-shadow: inset 0 2px 4px rgba(13, 48, 105, .05), 0 0 0 .25rem rgba($color, .35);
+  }
+}
+
+@mixin glass-text-relief {
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .8), 0 1px 2px rgba(13, 48, 105, .1);
+}
