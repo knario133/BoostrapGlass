@@ -2133,9 +2133,9 @@ progress {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   background-clip: padding-box;
-  border: var(--bs-border-width) solid rgba(255, 255, 255, 0.82);
+  border: var(--bs-border-width) solid rgba(255, 255, 255, 0.9);
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2152,10 +2152,10 @@ progress {
 }
 .form-control:focus {
   color: #0d3069;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   border-color: #1c52b3;
   outline: 0;
-  box-shadow: 0 0 0 4px rgba(28, 82, 179, 0.25);
+  box-shadow: 0 0 0 4px rgba(28, 82, 179, 0.25), 0 4px 16px rgba(28, 82, 179, 0.15);
 }
 .form-control::-webkit-date-and-time-value {
   min-width: 85px;
@@ -2323,12 +2323,12 @@ textarea.form-control-lg {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
   background-repeat: no-repeat;
   background-position: left 0.75rem center;
   background-size: 16px 12px;
-  border: var(--bs-border-width) solid rgba(255, 255, 255, 0.82);
+  border: var(--bs-border-width) solid rgba(255, 255, 255, 0.9);
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2397,7 +2397,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input {
-  --bs-form-check-bg: rgba(255, 255, 255, 0.6);
+  --bs-form-check-bg: rgba(255, 255, 255, 0.5);
   flex-shrink: 0;
   width: 1em;
   height: 1em;
@@ -2521,10 +2521,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(28, 82, 179, 0.25);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(28, 82, 179, 0.25), 0 4px 16px rgba(28, 82, 179, 0.15);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(28, 82, 179, 0.25);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 4px rgba(28, 82, 179, 0.25), 0 4px 16px rgba(28, 82, 179, 0.15);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -2671,7 +2671,7 @@ textarea.form-control-lg {
   z-index: -1;
   height: 1.5em;
   content: "";
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: var(--bs-border-radius);
 }
 .form-floating > textarea:disabled ~ label::after {
@@ -2724,7 +2724,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: var(--bs-tertiary-bg);
-  border: var(--bs-border-width) solid rgba(255, 255, 255, 0.82);
+  border: var(--bs-border-width) solid rgba(255, 255, 255, 0.9);
   border-radius: var(--bs-border-radius);
 }
 
@@ -4369,7 +4369,7 @@ textarea.form-control-lg {
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
   --bs-card-border-width: var(--bs-border-width);
-  --bs-card-border-color: rgba(255, 255, 255, 0.82);
+  --bs-card-border-color: rgba(255, 255, 255, 0.9);
   --bs-card-border-radius: 1rem;
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: calc(1rem - (var(--bs-border-width)));
@@ -4379,7 +4379,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: rgba(255, 255, 255, 0.6);
+  --bs-card-bg: rgba(255, 255, 255, 0.5);
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -12038,24 +12038,24 @@ textarea.form-control-lg {
 }
 .card {
   position: relative;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.82);
-  box-shadow: 0 12px 32px rgba(13, 48, 105, 0.13), 0 3px 8px rgba(13, 48, 105, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset -1px 0 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(81, 125, 190, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(13, 48, 105, 0.15), 0 8px 16px rgba(13, 48, 105, 0.08), inset 0 1px 0 rgb(255, 255, 255), inset -1px 0 0 rgba(255, 255, 255, 0.7), inset 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(13, 48, 105, 0.05);
 }
-@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) or (-webkit-backdrop-filter: blur(20px)) {
+@supports ((-webkit-backdrop-filter: blur(32px)) or (backdrop-filter: blur(32px))) or (-webkit-backdrop-filter: blur(32px)) {
   .card {
-    -webkit-backdrop-filter: blur(20px) saturate(145%);
-    backdrop-filter: blur(20px) saturate(145%);
+    -webkit-backdrop-filter: blur(32px) saturate(150%);
+    backdrop-filter: blur(32px) saturate(150%);
   }
 }
-@supports not (((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) or (-webkit-backdrop-filter: blur(20px))) {
+@supports not (((-webkit-backdrop-filter: blur(32px)) or (backdrop-filter: blur(32px))) or (-webkit-backdrop-filter: blur(32px))) {
   .card {
     background: rgba(255, 255, 255, 0.9);
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   .card:hover {
-    box-shadow: 0 16px 40px rgba(13, 48, 105, 0.15), 0 4px 10px rgba(13, 48, 105, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset -1px 0 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(81, 125, 190, 0.1);
+    box-shadow: 0 16px 40px rgba(13, 48, 105, 0.15), 0 4px 10px rgba(13, 48, 105, 0.1), inset 0 1px 0 rgb(255, 255, 255), inset -1px 0 0 rgba(255, 255, 255, 0.7), inset 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(13, 48, 105, 0.05);
     transform: translateY(-2px);
   }
 }
@@ -12097,18 +12097,18 @@ h6,
 .form-control,
 .form-select {
   color: #0d3069;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.82);
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 2px 5px rgba(13, 48, 105, 0.05);
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255);
 }
-@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) or (-webkit-backdrop-filter: blur(20px)) {
+@supports ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) or (-webkit-backdrop-filter: blur(16px)) {
   .form-control,
   .form-select {
-    -webkit-backdrop-filter: blur(10px) saturate(145%);
-    backdrop-filter: blur(10px) saturate(145%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    backdrop-filter: blur(16px) saturate(150%);
   }
 }
-@supports not (((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) or (-webkit-backdrop-filter: blur(20px))) {
+@supports not (((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) or (-webkit-backdrop-filter: blur(16px))) {
   .form-control,
   .form-select {
     background: rgba(255, 255, 255, 0.9);
@@ -12118,7 +12118,7 @@ h6,
 .form-select:focus {
   background: rgba(255, 255, 255, 0.9);
   border-color: #1c52b3;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 4px rgba(28, 82, 179, 0.25);
+  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 4px rgba(28, 82, 179, 0.25), 0 4px 16px rgba(28, 82, 179, 0.15);
 }
 .form-control::placeholder,
 .form-select::placeholder {
@@ -12147,12 +12147,12 @@ h6,
 .input-group .form-select:focus,
 .input-group .input-group-text:focus {
   z-index: 3;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 4px rgba(28, 82, 179, 0.25);
+  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 4px rgba(28, 82, 179, 0.25), 0 4px 16px rgba(28, 82, 179, 0.15);
 }
 .input-group .input-group-text {
   color: #0d3069;
   background: rgba(255, 255, 255, 0.7);
-  border-color: rgba(255, 255, 255, 0.82);
+  border-color: rgba(255, 255, 255, 0.9);
 }
 @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
   .input-group .input-group-text {
@@ -12186,11 +12186,11 @@ h6,
 
 .btn {
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 12px rgba(13, 48, 105, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 16px rgba(13, 48, 105, 0.12), 0 2px 6px rgba(13, 48, 105, 0.06), inset 0 2px 4px rgba(255, 255, 255, 0.7), inset 0 -2px 4px rgba(13, 48, 105, 0.1);
 }
 @media (prefers-reduced-motion: no-preference) {
   .btn:hover {
-    box-shadow: 0 6px 16px rgba(13, 48, 105, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 16px rgba(13, 48, 105, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.7), inset 0 -2px 4px rgba(13, 48, 105, 0.1);
     transform: translateY(-2px);
   }
 }
@@ -12204,17 +12204,17 @@ h6,
 .btn-outline-primary {
   color: #0d3069;
   border-color: rgba(13, 48, 105, 0.3);
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.82);
-  box-shadow: 0 12px 32px rgba(13, 48, 105, 0.13), 0 3px 8px rgba(13, 48, 105, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset -1px 0 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(81, 125, 190, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(13, 48, 105, 0.15), 0 8px 16px rgba(13, 48, 105, 0.08), inset 0 1px 0 rgb(255, 255, 255), inset -1px 0 0 rgba(255, 255, 255, 0.7), inset 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(13, 48, 105, 0.05);
 }
-@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) or (-webkit-backdrop-filter: blur(20px)) {
+@supports ((-webkit-backdrop-filter: blur(32px)) or (backdrop-filter: blur(32px))) or (-webkit-backdrop-filter: blur(32px)) {
   .btn-outline-primary {
-    -webkit-backdrop-filter: blur(20px) saturate(145%);
-    backdrop-filter: blur(20px) saturate(145%);
+    -webkit-backdrop-filter: blur(32px) saturate(150%);
+    backdrop-filter: blur(32px) saturate(150%);
   }
 }
-@supports not (((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) or (-webkit-backdrop-filter: blur(20px))) {
+@supports not (((-webkit-backdrop-filter: blur(32px)) or (backdrop-filter: blur(32px))) or (-webkit-backdrop-filter: blur(32px))) {
   .btn-outline-primary {
     background: rgba(255, 255, 255, 0.9);
   }
@@ -12227,7 +12227,7 @@ h6,
 
 [class*=btn-outline-] {
   background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(13, 48, 105, 0.1);
+  box-shadow: 0 6px 16px rgba(13, 48, 105, 0.12), 0 2px 6px rgba(13, 48, 105, 0.06);
 }
 @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
   [class*=btn-outline-] {
@@ -12241,7 +12241,7 @@ h6,
 
 .form-check-input {
   background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.1), 0 1px 2px rgba(13, 48, 105, 0.05);
 }
 .form-check-input:checked {
@@ -12251,7 +12251,7 @@ h6,
   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 2px 4px rgba(13, 48, 105, 0.3);
 }
 .form-check-input:focus {
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.1), 0 0 0 4px rgba(28, 82, 179, 0.25);
+  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.1), 0 0 0 4px rgba(28, 82, 179, 0.25), 0 4px 16px rgba(28, 82, 179, 0.15);
 }
 
 .form-switch .form-check-input {
@@ -12268,12 +12268,13 @@ h6,
 }
 
 .is-warning {
-  border-color: #ffc107;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+  background-color: rgba(255, 193, 7, 0.05);
+  border-color: rgba(255, 193, 7, 0.7);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255);
 }
 .is-warning:focus {
   border-color: #ffc107;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 0.25rem rgba(255, 193, 7, 0.35);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255), 0 0 0 0.25rem rgba(255, 193, 7, 0.25), 0 4px 16px rgba(255, 193, 7, 0.15);
 }
 
 .warning-feedback {
@@ -12289,12 +12290,13 @@ h6,
 }
 
 .is-info {
-  border-color: #0dcaf0;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 0.25rem rgba(13, 202, 240, 0.25);
+  background-color: rgba(13, 202, 240, 0.05);
+  border-color: rgba(13, 202, 240, 0.7);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255);
 }
 .is-info:focus {
   border-color: #0dcaf0;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 0.25rem rgba(13, 202, 240, 0.35);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255), 0 0 0 0.25rem rgba(13, 202, 240, 0.25), 0 4px 16px rgba(13, 202, 240, 0.15);
 }
 
 .info-feedback {
@@ -12310,40 +12312,50 @@ h6,
 }
 
 .form-control.is-valid,
-.form-select.is-valid {
-  border-color: #198754;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+.form-select.is-valid,
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+  background-color: rgba(25, 135, 84, 0.05);
+  border-color: rgba(25, 135, 84, 0.7);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255);
 }
 .form-control.is-valid:focus,
-.form-select.is-valid:focus {
+.form-select.is-valid:focus,
+.was-validated .form-control:valid:focus,
+.was-validated .form-select:valid:focus {
   border-color: #198754;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 0.25rem rgba(25, 135, 84, 0.35);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255), 0 0 0 0.25rem rgba(25, 135, 84, 0.25), 0 4px 16px rgba(25, 135, 84, 0.15);
 }
 
 .form-control.is-invalid,
-.form-select.is-invalid {
-  border-color: #dc3545;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+.form-select.is-invalid,
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+  background-color: rgba(220, 53, 69, 0.05);
+  border-color: rgba(220, 53, 69, 0.7);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255);
 }
 .form-control.is-invalid:focus,
-.form-select.is-invalid:focus {
+.form-select.is-invalid:focus,
+.was-validated .form-control:invalid:focus,
+.was-validated .form-select:invalid:focus {
   border-color: #dc3545;
-  box-shadow: inset 0 2px 4px rgba(13, 48, 105, 0.05), 0 0 0 0.25rem rgba(220, 53, 69, 0.35);
+  box-shadow: 0 4px 10px rgba(13, 48, 105, 0.08), 0 1px 3px rgba(13, 48, 105, 0.05), inset 0 2px 5px rgba(13, 48, 105, 0.08), inset 0 1px 1px rgba(13, 48, 105, 0.05), inset 0 -1px 0 rgb(255, 255, 255), 0 0 0 0.25rem rgba(220, 53, 69, 0.25), 0 4px 16px rgba(220, 53, 69, 0.15);
 }
 
 .dropdown-menu {
   padding: 0.5rem;
   background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.82);
-  box-shadow: 0 12px 32px rgba(13, 48, 105, 0.13), 0 3px 8px rgba(13, 48, 105, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset -1px 0 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(81, 125, 190, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(13, 48, 105, 0.15), 0 8px 16px rgba(13, 48, 105, 0.08), inset 0 1px 0 rgb(255, 255, 255), inset -1px 0 0 rgba(255, 255, 255, 0.7), inset 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(13, 48, 105, 0.05);
 }
-@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) or (-webkit-backdrop-filter: blur(20px)) {
+@supports ((-webkit-backdrop-filter: blur(32px)) or (backdrop-filter: blur(32px))) or (-webkit-backdrop-filter: blur(32px)) {
   .dropdown-menu {
-    -webkit-backdrop-filter: blur(20px) saturate(145%);
-    backdrop-filter: blur(20px) saturate(145%);
+    -webkit-backdrop-filter: blur(32px) saturate(150%);
+    backdrop-filter: blur(32px) saturate(150%);
   }
 }
-@supports not (((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) or (-webkit-backdrop-filter: blur(20px))) {
+@supports not (((-webkit-backdrop-filter: blur(32px)) or (backdrop-filter: blur(32px))) or (-webkit-backdrop-filter: blur(32px))) {
   .dropdown-menu {
     background: rgba(255, 255, 255, 0.9);
   }

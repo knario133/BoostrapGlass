@@ -232,11 +232,15 @@ h6 {
 
 // Overriding default valid/invalid to use glass mixin
 .form-control.is-valid,
-.form-select.is-valid {
+.form-select.is-valid,
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
   @include glass-validation-state($glass-color-success);
 }
 .form-control.is-invalid,
-.form-select.is-invalid {
+.form-select.is-invalid,
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
   @include glass-validation-state($glass-color-danger);
 }
 
